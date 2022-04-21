@@ -33,8 +33,9 @@
 		</style>
 	</head>
 	<body class="index loading">
+		<input type="button" text="Music" onclick="document.getElementById('backMusic').play();" /> <br />
 		<!-- background music -->
-			<embed src="musics/back.mp3" loop="true" autostart="true" hidden="true" />    <!-- width="0" height="0" -->
+			<embed id="backMusic" src="musics/back.mp3" loop="true" autostart="true"  />    <!-- hidden="true" width="0" height="0" -->
 		<!-- Banner -->
 			<section id="banner">
 				
@@ -256,6 +257,18 @@
 			</footer>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+		
+		<script>
+			var x = document.getElementById("backMusic");
+			
+			function playAudio() {
+			  x.play();
+			}
+			
+			function pauseAudio() {
+			  x.pause();
+			}
+		</script>
+		
 	</body>
 </html>
